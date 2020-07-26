@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Landmark Remark requires your current location to store notes location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Landmark Remark requires your current location to store notes location</string>
 </dict>
 </plist>

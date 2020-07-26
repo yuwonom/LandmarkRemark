@@ -15,6 +15,7 @@
 		4CD4698024CD934300757E62 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4697F24CD934300757E62 /* HomeView.swift */; };
 		4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698124CD935500757E62 /* HomeViewModel.swift */; };
 		4CD4698424CD93EF00757E62 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698324CD93EF00757E62 /* MapView.swift */; };
+		4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698624CD959A00757E62 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4CD4697F24CD934300757E62 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CD4698124CD935500757E62 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4CD4698324CD93EF00757E62 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4CD4698624CD959A00757E62 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				4CD4696924CD8F9C00757E62 /* AppDelegate.swift */,
 				4CD4696B24CD8F9C00757E62 /* SceneDelegate.swift */,
+				4CD4698524CD957C00757E62 /* Managers */,
 				4CD4697D24CD92E600757E62 /* Views */,
 				4CD4697E24CD92FB00757E62 /* ViewModels */,
 				4CD4696F24CD8F9E00757E62 /* Assets.xcassets */,
@@ -95,6 +98,14 @@
 				4CD4698124CD935500757E62 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4CD4698524CD957C00757E62 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4698624CD959A00757E62 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				4CD4698024CD934300757E62 /* HomeView.swift in Sources */,
 				4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */,
+				4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,
 				4CD4696C24CD8F9C00757E62 /* SceneDelegate.swift in Sources */,
 				4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */,
