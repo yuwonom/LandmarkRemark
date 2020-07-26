@@ -12,6 +12,7 @@ struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
     
+    @State var addButtonDisabled: Bool = true
     @State var showEnterUsernameView: Bool = false
     @State var showAddRemarkView: Bool = false
     
@@ -20,16 +21,17 @@ struct HomeView: View {
             MapView()
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
-            .navigationBarItems(
-                trailing: Button(action: {
-                    if (self.viewModel.firestoreManager.user == nil) {
-                        self.showEnterUsernameView.toggle()
-                    } else {
-                        self.showAddRemarkView.toggle()
-                    }
-                }) {
-                    Image(systemName: "plus")
-                })
+                .navigationBarItems(
+                    trailing: Button(action: {
+                        if (self.viewModel.firestoreManager.user == nil) {
+                            self.showEnterUsernameView.toggle()
+                        } else {
+                            self.showAddRemarkView.toggle()
+                        }
+                    }) {
+                        Image(systemName: "plus")
+                            .disabled(self.addButtonDisabled)
+                    })
         }
         .background(EmptyView().sheet(isPresented: self.$showEnterUsernameView) {
             EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView)
@@ -37,6 +39,9 @@ struct HomeView: View {
         .background(EmptyView().sheet(isPresented: self.$showAddRemarkView) {
             AddRemarkView(showAddRemarkView: self.$showAddRemarkView, coordinate: self.viewModel.locationManager.location!.coordinate)
         })
+        .onReceive(self.viewModel.locationManager.$location) { (location) in
+            self.addButtonDisabled = location == nil
+        }
     }
     
 }

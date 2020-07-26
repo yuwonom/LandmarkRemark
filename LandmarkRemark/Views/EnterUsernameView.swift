@@ -33,13 +33,15 @@ struct EnterUsernameView: View {
                     self.showEnterUsernameView = false
                 }) {
                     Text("Cancel")
-                },
+                }
+                .disabled(self.viewModel.isBusy),
                 trailing: Button(action: {
                     self.viewModel.setUsername()
                     self.showEnterUsernameView = false
                 }) {
                     Text("Save")
                 }
+                .disabled(self.viewModel.username.isEmpty || self.viewModel.isBusy)
             )
         }
     }

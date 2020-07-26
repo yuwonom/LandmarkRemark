@@ -50,12 +50,14 @@ struct AddRemarkView: View {
                     self.showAddRemarkView = false
                 }) {
                     Text("Cancel")
-                },
+                }
+                .disabled(self.viewModel.isBusy),
                 trailing: Button(action: {
                     self.viewModel.addRemark()
                 }) {
                     Text("Create")
-                })
+                }
+                .disabled(self.viewModel.notes.isEmpty || self.viewModel.isBusy))
         }
     }
     
