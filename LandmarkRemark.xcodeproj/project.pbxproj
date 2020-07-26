@@ -21,6 +21,8 @@
 		4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */; };
 		4CD4699424CDA69100757E62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699324CDA69100757E62 /* User.swift */; };
 		4CD4699624CDA6CE00757E62 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */; };
+		4CD4699A24CDAD3E00757E62 /* AddRemarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699924CDAD3E00757E62 /* AddRemarkViewModel.swift */; };
+		4CD4699C24CDAD8500757E62 /* AddRemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewModel.swift; sourceTree = "<group>"; };
 		4CD4699324CDA69100757E62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		4CD4699924CDAD3E00757E62 /* AddRemarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemarkViewModel.swift; sourceTree = "<group>"; };
+		4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemarkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		4CD4697D24CD92E600757E62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */,
 				4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */,
 				4CD4697F24CD934300757E62 /* HomeView.swift */,
 				4CD4698324CD93EF00757E62 /* MapView.swift */,
@@ -104,6 +109,7 @@
 		4CD4697E24CD92FB00757E62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4699924CDAD3E00757E62 /* AddRemarkViewModel.swift */,
 				4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */,
 				4CD4698124CD935500757E62 /* HomeViewModel.swift */,
 			);
@@ -259,11 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD4699C24CDAD8500757E62 /* AddRemarkView.swift in Sources */,
 				4CD4698024CD934300757E62 /* HomeView.swift in Sources */,
 				4CD4699624CDA6CE00757E62 /* FirestoreManager.swift in Sources */,
 				4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */,
 				4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */,
 				4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */,
+				4CD4699A24CDAD3E00757E62 /* AddRemarkViewModel.swift in Sources */,
 				4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */,
 				4CD4699424CDA69100757E62 /* User.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,

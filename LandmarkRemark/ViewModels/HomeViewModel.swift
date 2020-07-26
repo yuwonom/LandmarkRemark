@@ -11,5 +11,6 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     let title = "Landmark Remark"
-
+    
+    @Published var firestoreManager: FirestoreManager = FirestoreManager()
 }
