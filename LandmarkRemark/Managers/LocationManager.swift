@@ -18,7 +18,7 @@ class LocationManager: NSObject, ObservableObject {
     var onFirstLocationUpdateHandler: ((CLLocation?) -> Void)?
     
     // Manager to handle location service
-    private let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager = CLLocationManager()
     
     override init() {
         super.init()

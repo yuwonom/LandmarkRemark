@@ -19,6 +19,8 @@
 		4CD4698924CD9EAD00757E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */; };
 		4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */; };
 		4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */; };
+		4CD4699424CDA69100757E62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699324CDA69100757E62 /* User.swift */; };
+		4CD4699624CDA6CE00757E62 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
 		4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewModel.swift; sourceTree = "<group>"; };
+		4CD4699324CDA69100757E62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				4CD4696924CD8F9C00757E62 /* AppDelegate.swift */,
 				4CD4696B24CD8F9C00757E62 /* SceneDelegate.swift */,
 				4CD4698524CD957C00757E62 /* Managers */,
+				4CD4699224CDA67500757E62 /* Models */,
 				4CD4697D24CD92E600757E62 /* Views */,
 				4CD4697E24CD92FB00757E62 /* ViewModels */,
 				4CD4696F24CD8F9E00757E62 /* Assets.xcassets */,
@@ -108,9 +113,18 @@
 		4CD4698524CD957C00757E62 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */,
 				4CD4698624CD959A00757E62 /* LocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4CD4699224CDA67500757E62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4699324CDA69100757E62 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7FC8D5BB280C7B23CCCE7F61 /* Pods */ = {
@@ -246,10 +260,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD4698024CD934300757E62 /* HomeView.swift in Sources */,
+				4CD4699624CDA6CE00757E62 /* FirestoreManager.swift in Sources */,
 				4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */,
 				4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */,
 				4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */,
 				4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */,
+				4CD4699424CDA69100757E62 /* User.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,
 				4CD4696C24CD8F9C00757E62 /* SceneDelegate.swift in Sources */,
 				4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */,

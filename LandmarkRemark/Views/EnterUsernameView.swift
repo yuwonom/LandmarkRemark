@@ -35,7 +35,7 @@ struct EnterUsernameView: View {
                     Text("Cancel")
                 },
                 trailing: Button(action: {
-                    // TODO: Make a Firestore call to save username
+                    self.viewModel.setUsername()
                     self.showEnterUsernameView = false
                 }) {
                     Text("Save")
