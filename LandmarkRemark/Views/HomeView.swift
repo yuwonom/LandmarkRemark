@@ -12,11 +12,22 @@ struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
     
+    @State var showEnterUsernameView: Bool = false
+    
     var body: some View {
         NavigationView {
             MapView()
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
+            .navigationBarItems(
+                trailing: Button(action: {
+                    self.showEnterUsernameView.toggle()
+                }) {
+                    Image(systemName: "plus")
+                })
+        }
+        .sheet(isPresented: self.$showEnterUsernameView) {
+            EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView)
         }
     }
     
