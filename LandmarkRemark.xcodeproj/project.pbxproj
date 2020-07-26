@@ -3,33 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A59F2AB4DFBC8D6DF18A2E9 /* Pods_LandmarkRemark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EF145E85D7C7F29812069F /* Pods_LandmarkRemark.framework */; };
 		4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4696924CD8F9C00757E62 /* AppDelegate.swift */; };
 		4CD4696C24CD8F9C00757E62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4696B24CD8F9C00757E62 /* SceneDelegate.swift */; };
 		4CD4697024CD8F9E00757E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4696F24CD8F9E00757E62 /* Assets.xcassets */; };
-		4CD4697324CD8F9E00757E62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4697224CD8F9E00757E62 /* Preview Assets.xcassets */; };
 		4CD4697624CD8F9E00757E62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4697424CD8F9E00757E62 /* LaunchScreen.storyboard */; };
 		4CD4698024CD934300757E62 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4697F24CD934300757E62 /* HomeView.swift */; };
 		4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698124CD935500757E62 /* HomeViewModel.swift */; };
 		4CD4698424CD93EF00757E62 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698324CD93EF00757E62 /* MapView.swift */; };
 		4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698624CD959A00757E62 /* LocationManager.swift */; };
+		4CD4698924CD9EAD00757E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */; };
+		4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */; };
+		4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181FC693AFFF2D92469C2511 /* Pods-LandmarkRemark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemark.debug.xcconfig"; path = "Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark.debug.xcconfig"; sourceTree = "<group>"; };
+		268F435A8DD9A65983CF8042 /* Pods-LandmarkRemark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandmarkRemark.release.xcconfig"; path = "Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark.release.xcconfig"; sourceTree = "<group>"; };
+		26EF145E85D7C7F29812069F /* Pods_LandmarkRemark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandmarkRemark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD4696624CD8F9C00757E62 /* LandmarkRemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkRemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD4696924CD8F9C00757E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD4696B24CD8F9C00757E62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4CD4696F24CD8F9E00757E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4CD4697224CD8F9E00757E62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CD4697524CD8F9E00757E62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD4697724CD8F9E00757E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD4697F24CD934300757E62 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CD4698124CD935500757E62 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4CD4698324CD93EF00757E62 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4CD4698624CD959A00757E62 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
+		4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A59F2AB4DFBC8D6DF18A2E9 /* Pods_LandmarkRemark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +57,8 @@
 			children = (
 				4CD4696824CD8F9C00757E62 /* LandmarkRemark */,
 				4CD4696724CD8F9C00757E62 /* Products */,
+				7FC8D5BB280C7B23CCCE7F61 /* Pods */,
+				A67BF2463931A5F71A334B02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,22 +81,15 @@
 				4CD4696F24CD8F9E00757E62 /* Assets.xcassets */,
 				4CD4697424CD8F9E00757E62 /* LaunchScreen.storyboard */,
 				4CD4697724CD8F9E00757E62 /* Info.plist */,
-				4CD4697124CD8F9E00757E62 /* Preview Content */,
+				4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */,
 			);
 			path = LandmarkRemark;
-			sourceTree = "<group>";
-		};
-		4CD4697124CD8F9E00757E62 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4CD4697224CD8F9E00757E62 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		4CD4697D24CD92E600757E62 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */,
 				4CD4697F24CD934300757E62 /* HomeView.swift */,
 				4CD4698324CD93EF00757E62 /* MapView.swift */,
 			);
@@ -95,6 +99,7 @@
 		4CD4697E24CD92FB00757E62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */,
 				4CD4698124CD935500757E62 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
@@ -108,6 +113,23 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		7FC8D5BB280C7B23CCCE7F61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				181FC693AFFF2D92469C2511 /* Pods-LandmarkRemark.debug.xcconfig */,
+				268F435A8DD9A65983CF8042 /* Pods-LandmarkRemark.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A67BF2463931A5F71A334B02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26EF145E85D7C7F29812069F /* Pods_LandmarkRemark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CD4697A24CD8F9E00757E62 /* Build configuration list for PBXNativeTarget "LandmarkRemark" */;
 			buildPhases = (
+				D697FE6E1D1FA04277E47AA6 /* [CP] Check Pods Manifest.lock */,
 				4CD4696224CD8F9C00757E62 /* Sources */,
 				4CD4696324CD8F9C00757E62 /* Frameworks */,
 				4CD4696424CD8F9C00757E62 /* Resources */,
+				ACAA3879AD2C9C9D0D3FFDB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,12 +191,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD4697624CD8F9E00757E62 /* LaunchScreen.storyboard in Resources */,
-				4CD4697324CD8F9E00757E62 /* Preview Assets.xcassets in Resources */,
+				4CD4698924CD9EAD00757E62 /* GoogleService-Info.plist in Resources */,
 				4CD4697024CD8F9E00757E62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACAA3879AD2C9C9D0D3FFDB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LandmarkRemark/Pods-LandmarkRemark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D697FE6E1D1FA04277E47AA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LandmarkRemark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CD4696224CD8F9C00757E62 /* Sources */ = {
@@ -180,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD4698024CD934300757E62 /* HomeView.swift in Sources */,
+				4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */,
+				4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */,
 				4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */,
 				4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,
@@ -318,10 +386,11 @@
 		};
 		4CD4697B24CD8F9E00757E62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181FC693AFFF2D92469C2511 /* Pods-LandmarkRemark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"LandmarkRemark/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UBX5HWGF2U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LandmarkRemark/Info.plist;
@@ -339,10 +408,11 @@
 		};
 		4CD4697C24CD8F9E00757E62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268F435A8DD9A65983CF8042 /* Pods-LandmarkRemark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"LandmarkRemark/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UBX5HWGF2U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LandmarkRemark/Info.plist;
