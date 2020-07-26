@@ -14,4 +14,5 @@ class HomeViewModel: ObservableObject {
     let title = "Landmark Remark"
     
     @Published var firestoreManager: FirestoreManager = Resolver.resolve()
+    @Published var locationManager: LocationManager = Resolver.resolve()
 }

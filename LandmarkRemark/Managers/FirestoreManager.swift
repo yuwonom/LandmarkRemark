@@ -38,4 +38,23 @@ class FirestoreManager: NSObject, ObservableObject {
                 }
             }
     }
+    
+    func addRemark(notes: String, coordinate: GeoPoint, completion: ((_ result: Bool) -> Void)? = nil) {
+        firestore
+            .collection("remarks")
+            .addDocument(data: [
+                "notes": notes,
+                "coordinate": coordinate,
+                "userId": self.user!.id!]) { (error) in
+                    var result = true
+                    if let error = error {
+                        result = false
+                        print(error)
+                    }
+                    
+                    if let completion = completion {
+                        completion(result)
+                    }
+                }
+    }
 }
