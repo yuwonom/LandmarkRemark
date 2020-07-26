@@ -8,5 +8,6 @@ target 'LandmarkRemark' do
   # Pods for LandmarkRemark
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Resolver'
 
 end

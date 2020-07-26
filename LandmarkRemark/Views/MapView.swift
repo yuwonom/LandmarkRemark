@@ -7,11 +7,12 @@
 //
 
 import MapKit
+import Resolver
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
     
-    let locationManager: LocationManager = LocationManager()
+    let locationManager: LocationManager = Resolver.resolve()
 
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView(frame: UIScreen.main.bounds)

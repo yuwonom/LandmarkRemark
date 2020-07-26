@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Resolver
 
 class HomeViewModel: ObservableObject {
     
     let title = "Landmark Remark"
     
-    @Published var firestoreManager: FirestoreManager = FirestoreManager()
+    @Published var firestoreManager: FirestoreManager = Resolver.resolve()
 }

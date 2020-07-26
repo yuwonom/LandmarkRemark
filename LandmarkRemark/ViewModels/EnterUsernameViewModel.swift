@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import Resolver
 
 class EnterUsernameViewModel: ObservableObject {
     
     let title = "Enter Username"
     
-    @Published var firestoreManager: FirestoreManager = FirestoreManager()
+    @Published var firestoreManager: FirestoreManager = Resolver.resolve()
     @Published var username: String = ""
     @Published var isBusy: Bool = false
     @Published var addUserResult: Bool? = nil

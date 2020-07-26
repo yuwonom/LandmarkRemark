@@ -23,6 +23,7 @@
 		4CD4699624CDA6CE00757E62 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */; };
 		4CD4699A24CDAD3E00757E62 /* AddRemarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699924CDAD3E00757E62 /* AddRemarkViewModel.swift */; };
 		4CD4699C24CDAD8500757E62 /* AddRemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */; };
+		4CD4699E24CDB05300757E62 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		4CD4699924CDAD3E00757E62 /* AddRemarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemarkViewModel.swift; sourceTree = "<group>"; };
 		4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemarkView.swift; sourceTree = "<group>"; };
+		4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				4CD4696924CD8F9C00757E62 /* AppDelegate.swift */,
 				4CD4696B24CD8F9C00757E62 /* SceneDelegate.swift */,
+				4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */,
 				4CD4698524CD957C00757E62 /* Managers */,
 				4CD4699224CDA67500757E62 /* Models */,
 				4CD4697D24CD92E600757E62 /* Views */,
@@ -272,6 +275,7 @@
 				4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */,
 				4CD4696A24CD8F9C00757E62 /* AppDelegate.swift in Sources */,
 				4CD4699A24CDAD3E00757E62 /* AddRemarkViewModel.swift in Sources */,
+				4CD4699E24CDB05300757E62 /* AppDelegate+Injection.swift in Sources */,
 				4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */,
 				4CD4699424CDA69100757E62 /* User.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,
