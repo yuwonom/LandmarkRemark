@@ -19,7 +19,7 @@ class AddRemarkViewModel: ObservableObject {
     @Published var coordinateText: String = ""
     @Published var notes: String = ""
     @Published var isBusy: Bool = false
-    @Published var addUserResult: Bool? = nil
+    @Published var addRemarkResult: Bool? = nil
     
     private var coordinate: CLLocationCoordinate2D
     
@@ -36,7 +36,7 @@ class AddRemarkViewModel: ObservableObject {
         self.isBusy = true
         let coordinate = GeoPoint(latitude: self.coordinate.latitude, longitude: self.coordinate.longitude)
         self.firestoreManager.addRemark(notes: self.notes, coordinate: coordinate) { (result) in
-            self.addUserResult = result
+            self.addRemarkResult = result
             self.isBusy = false
         }
     }

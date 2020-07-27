@@ -34,7 +34,7 @@ struct HomeView: View {
                     })
         }
         .background(EmptyView().sheet(isPresented: self.$showEnterUsernameView) {
-            EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView)
+            EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView, showAddRemarkView: self.$showAddRemarkView)
         })
         .background(EmptyView().sheet(isPresented: self.$showAddRemarkView) {
             AddRemarkView(showAddRemarkView: self.$showAddRemarkView, coordinate: self.viewModel.locationManager.location!.coordinate)

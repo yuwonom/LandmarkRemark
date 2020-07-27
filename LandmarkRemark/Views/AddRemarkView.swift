@@ -59,6 +59,13 @@ struct AddRemarkView: View {
                 }
                 .disabled(self.viewModel.notes.isEmpty || self.viewModel.isBusy))
         }
+        .onReceive(self.viewModel.$addRemarkResult) { (result) in
+            if let result = result {
+                if (result) {
+                    self.showAddRemarkView = false
+                }
+            }
+        }
     }
     
 }

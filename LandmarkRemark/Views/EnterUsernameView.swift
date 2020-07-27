@@ -13,6 +13,7 @@ struct EnterUsernameView: View {
     @ObservedObject var viewModel: EnterUsernameViewModel = EnterUsernameViewModel()
     
     @Binding var showEnterUsernameView: Bool
+    @Binding var showAddRemarkView: Bool
     
     var body: some View {
         NavigationView {
@@ -37,12 +38,19 @@ struct EnterUsernameView: View {
                 .disabled(self.viewModel.isBusy),
                 trailing: Button(action: {
                     self.viewModel.setUsername()
-                    self.showEnterUsernameView = false
                 }) {
                     Text("Save")
                 }
                 .disabled(self.viewModel.username.isEmpty || self.viewModel.isBusy)
             )
+        }
+        .onReceive(self.viewModel.$addUserResult) { (result) in
+            if let result = result {
+                if (result) {
+                    self.showEnterUsernameView = false
+                    self.showAddRemarkView = true
+                }
+            }
         }
     }
     
@@ -51,7 +59,7 @@ struct EnterUsernameView: View {
 struct EnterUsernameView_Previews: PreviewProvider {
     
     static var previews: some View {
-        EnterUsernameView(showEnterUsernameView: .constant(true))
+        EnterUsernameView(showEnterUsernameView: .constant(true), showAddRemarkView: .constant(false))
     }
     
 }
