@@ -25,12 +25,12 @@ class HomeViewModel: ObservableObject {
     
     init() {
         self.firestoreManager.$remarks.sink { (remarks) in
-            self.loadAnnotations()
+            self.loadAnnotations(remarks: remarks, keywords: self.keywords)
         }
         .store(in: &cancellables)
         
         self.$keywords.sink { (keywords) in
-            self.loadAnnotations()
+            self.loadAnnotations(remarks: self.firestoreManager.remarks, keywords: keywords)
         }
         .store(in: &cancellables)
     }
@@ -45,17 +45,22 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    private func loadAnnotations() {
-        self.annotations.removeAll()
-        for remark in self.firestoreManager.remarks {
+    private func loadAnnotations(remarks: [Remark], keywords: String) {
+        let group = DispatchGroup()
+        var annotations = [MKPointAnnotation]();
+        
+        for remark in remarks {
+            group.enter()
             firestoreManager.getUser(id: remark.userId) { (user) in
                 guard let user = user else {
+                    group.leave()
                     return
                 }
                 
                 // Filter remarks being shown on the map based on keywords
                 let showRemark = user.username.contains(self.keywords) || remark.notes.contains(self.keywords) || self.keywords.isEmpty
                 if !showRemark {
+                    group.leave()
                     return
                 }
                 
@@ -63,8 +68,14 @@ class HomeViewModel: ObservableObject {
                 annotation.coordinate = CLLocationCoordinate2D(latitude: remark.coordinate.latitude, longitude: remark.coordinate.longitude)
                 annotation.title = user.username
                 annotation.subtitle = remark.notes
-                self.annotations.append(annotation)
+                annotations.append(annotation)
+                
+                group.leave()
             }
+        }
+
+        group.notify(queue: .main) {
+            self.annotations = annotations;
         }
     }
 }
