@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
 
-class FirestoreManager: NSObject, ObservableObject {
+class FirestoreManager: ObservableObject {
 
     // Current active user
     @Published var user: User?
@@ -24,14 +24,18 @@ class FirestoreManager: NSObject, ObservableObject {
     // Firestore manager
     private let firestore: Firestore = Firestore.firestore()
     
-    func listenForRemarks() {
+    init() {
+        self.listenForRemarks()
+    }
+    
+    private func listenForRemarks() {
         // Stop running listener
         if listenerRegistration != nil {
             listenerRegistration?.remove()
         }
         
         listenerRegistration = firestore
-        .collection("remarks")
+            .collection("remarks")
             .addSnapshotListener({ (snapshot, error) in
                 if let snapshot = snapshot {
                     self.remarks = snapshot.documents.compactMap({ (document) in

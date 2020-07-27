@@ -18,7 +18,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            MapView()
+            MapView(annotations: self.$viewModel.annotations)
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
                 .navigationBarItems(
@@ -30,8 +30,8 @@ struct HomeView: View {
                         }
                     }) {
                         Image(systemName: "plus")
-                            .disabled(self.addButtonDisabled)
-                    })
+                    }
+                    .disabled(self.addButtonDisabled))
         }
         .background(EmptyView().sheet(isPresented: self.$showEnterUsernameView) {
             EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView, showAddRemarkView: self.$showAddRemarkView)

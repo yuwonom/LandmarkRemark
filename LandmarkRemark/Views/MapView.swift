@@ -13,6 +13,12 @@ import SwiftUI
 struct MapView: UIViewRepresentable {
     
     let locationManager: LocationManager = Resolver.resolve()
+    
+    @Binding var annotations: [MKPointAnnotation]
+    
+    init(annotations: Binding<[MKPointAnnotation]>) {
+        self._annotations = annotations
+    }
 
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView(frame: UIScreen.main.bounds)
@@ -21,6 +27,9 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
+        // Refresh annotations
+        view.addAnnotations(self.annotations)
+        
         // Set map region callback when the first location is received
         self.locationManager.setOnFirstLocationUpdateHandler { (location) in
             guard let location = location else {
@@ -38,7 +47,7 @@ struct MapView: UIViewRepresentable {
 struct MapView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MapView()
+        MapView(annotations: .constant([MKPointAnnotation]()))
     }
     
 }
