@@ -15,11 +15,34 @@ class FirestoreManager: NSObject, ObservableObject {
     // Current active user
     @Published var user: User?
     
+    // All loaded remarks
+    @Published var remarks: [Remark] = [Remark]()
+    
+    // Listener to listen to remarks updates
+    private var listenerRegistration: ListenerRegistration?
+    
     // Firestore manager
     private let firestore: Firestore = Firestore.firestore()
     
+    func listenForRemarks() {
+        // Stop running listener
+        if listenerRegistration != nil {
+            listenerRegistration?.remove()
+        }
+        
+        listenerRegistration = firestore
+        .collection("remarks")
+            .addSnapshotListener({ (snapshot, error) in
+                if let snapshot = snapshot {
+                    self.remarks = snapshot.documents.compactMap({ (document) in
+                        try? document.data(as: Remark.self)
+                    })
+                }
+            })
+    }
+    
     // Get user from the given user ID
-    func getUser(id: String, completion: (_ user: User?) -> Void) {
+    func getUser(id: String, completion: @escaping (_ user: User?) -> Void) {
         firestore
             .collection("users")
             .document(id)

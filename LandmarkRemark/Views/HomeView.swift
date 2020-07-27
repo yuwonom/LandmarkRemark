@@ -23,7 +23,7 @@ struct HomeView: View {
                 .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
                 .navigationBarItems(
                     trailing: Button(action: {
-                        if (self.viewModel.firestoreManager.user == nil) {
+                        if self.viewModel.firestoreManager.user == nil {
                             self.showEnterUsernameView.toggle()
                         } else {
                             self.showAddRemarkView.toggle()
