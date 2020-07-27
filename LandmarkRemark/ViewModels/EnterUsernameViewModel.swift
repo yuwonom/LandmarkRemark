@@ -14,6 +14,7 @@ class EnterUsernameViewModel: ObservableObject {
     let title = "Enter Username"
     
     @Published var firestoreManager: FirestoreManager = Resolver.resolve()
+    @Published var localStorageManager: LocalStorageManager = Resolver.resolve()
     @Published var username: String = ""
     @Published var isBusy: Bool = false
     @Published var addUserResult: Bool? = nil
@@ -27,6 +28,7 @@ class EnterUsernameViewModel: ObservableObject {
         self.firestoreManager.addUser(username: self.username) { (user, result) in
             if let user = user {
                 self.firestoreManager.user = user
+                self.localStorageManager.setUserId(userId: user.id!)
             }
             self.addUserResult = result
             self.isBusy = false

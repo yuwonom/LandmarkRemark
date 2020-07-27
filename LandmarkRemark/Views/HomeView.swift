@@ -42,6 +42,9 @@ struct HomeView: View {
         .onReceive(self.viewModel.locationManager.$location) { (location) in
             self.addButtonDisabled = location == nil
         }
+        .onAppear {
+            self.viewModel.loadUserId()
+        }
     }
     
 }

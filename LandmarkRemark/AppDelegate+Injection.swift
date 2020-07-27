@@ -14,6 +14,7 @@ extension Resolver: ResolverRegistering {
         // Register all services
         register { FirestoreManager() }.scope(application)
         register { LocationManager() }.scope(application)
+        register { LocalStorageManager() }.scope(application)
     }
     
 }

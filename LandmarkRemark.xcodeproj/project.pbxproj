@@ -25,6 +25,7 @@
 		4CD4699C24CDAD8500757E62 /* AddRemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */; };
 		4CD4699E24CDB05300757E62 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */; };
 		4CD469A024CDB19100757E62 /* Remark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699F24CDB19100757E62 /* Remark.swift */; };
+		4CD469A224CE57C200757E62 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD469A124CE57C200757E62 /* LocalStorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		4CD4699B24CDAD8500757E62 /* AddRemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemarkView.swift; sourceTree = "<group>"; };
 		4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		4CD4699F24CDB19100757E62 /* Remark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remark.swift; sourceTree = "<group>"; };
+		4CD469A124CE57C200757E62 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				4CD4699524CDA6CE00757E62 /* FirestoreManager.swift */,
 				4CD4698624CD959A00757E62 /* LocationManager.swift */,
+				4CD469A124CE57C200757E62 /* LocalStorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				4CD4699424CDA69100757E62 /* User.swift in Sources */,
 				4CD4698424CD93EF00757E62 /* MapView.swift in Sources */,
 				4CD469A024CDB19100757E62 /* Remark.swift in Sources */,
+				4CD469A224CE57C200757E62 /* LocalStorageManager.swift in Sources */,
 				4CD4696C24CD8F9C00757E62 /* SceneDelegate.swift in Sources */,
 				4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */,
 			);

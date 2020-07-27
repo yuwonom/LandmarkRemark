@@ -18,6 +18,22 @@ class FirestoreManager: NSObject, ObservableObject {
     // Firestore manager
     private let firestore: Firestore = Firestore.firestore()
     
+    // Get user from the given user ID
+    func getUser(id: String, completion: (_ user: User?) -> Void) {
+        firestore
+            .collection("users")
+            .document(id)
+            .getDocument { (snapshot, error) in
+                var user: User? = nil
+                if let snapshot = snapshot {
+                    user = try? snapshot.data(as: User.self)
+                }
+                
+                return completion(user)
+            }
+    }
+    
+    // Add a new user given a username, returning the full user document and request result
     func addUser(username: String, completion: ((_ user: User?, _ result: Bool) -> Void)? = nil) {
         var ref: DocumentReference? = nil
         ref = firestore
@@ -39,6 +55,7 @@ class FirestoreManager: NSObject, ObservableObject {
             }
     }
     
+    // Add a new remark given notes and coordinate, returning the request result
     func addRemark(notes: String, coordinate: GeoPoint, completion: ((_ result: Bool) -> Void)? = nil) {
         firestore
             .collection("remarks")

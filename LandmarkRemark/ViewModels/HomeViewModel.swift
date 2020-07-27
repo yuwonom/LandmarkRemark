@@ -15,4 +15,15 @@ class HomeViewModel: ObservableObject {
     
     @Published var firestoreManager: FirestoreManager = Resolver.resolve()
     @Published var locationManager: LocationManager = Resolver.resolve()
+    @Published var localStorageManager: LocalStorageManager = Resolver.resolve()
+    
+    func loadUserId() {
+        guard let userId = self.localStorageManager.getUserId() else {
+            return
+        }
+        
+        self.firestoreManager.getUser(id: userId) { (user) in
+            self.firestoreManager.user = user
+        }
+    }
 }
