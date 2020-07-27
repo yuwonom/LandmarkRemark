@@ -15,12 +15,15 @@ struct storageKeys {
 
 class LocalStorageManager: ObservableObject {
 
+    // Local storage service manager
     let storage = UserDefaults.standard
     
+    // Get persisted user ID from local storage, returning nil if not found
     func getUserId() -> String? {
         storage.string(forKey: storageKeys.userId)
     }
     
+    // Store a new user ID to local storage
     func setUserId(userId: String) {
         storage.set(userId, forKey: storageKeys.userId)
     }
