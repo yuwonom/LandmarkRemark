@@ -28,6 +28,7 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ view: MKMapView, context: Context) {
         // Refresh annotations
+        view.removeAnnotations(view.annotations)
         view.addAnnotations(self.annotations)
         
         // Set map region callback when the first location is received

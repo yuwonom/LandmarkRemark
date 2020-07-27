@@ -11,6 +11,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @Environment(\.colorScheme) var colorScheme
     
     @State var addButtonDisabled: Bool = true
     @State var showEnterUsernameView: Bool = false
@@ -18,20 +19,29 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            MapView(annotations: self.$viewModel.annotations)
-                .edgesIgnoringSafeArea(.bottom)
-                .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
-                .navigationBarItems(
-                    trailing: Button(action: {
-                        if self.viewModel.firestoreManager.user == nil {
-                            self.showEnterUsernameView.toggle()
-                        } else {
-                            self.showAddRemarkView.toggle()
-                        }
-                    }) {
-                        Image(systemName: "plus")
+            ZStack(alignment: .topLeading) {
+                MapView(annotations: self.$viewModel.annotations)
+                if !self.viewModel.firestoreManager.remarks.isEmpty {
+                    TextField("Keywords", text: Binding<String>(
+                        get: { self.viewModel.keywords },
+                        set: { self.viewModel.keywords = $0}))
+                    .padding(.all)
+                    .background(colorScheme == .dark ? Color.black : Color.white)
+                }
+            }
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
+            .navigationBarItems(
+                trailing: Button(action: {
+                    if self.viewModel.firestoreManager.user == nil {
+                        self.showEnterUsernameView.toggle()
+                    } else {
+                        self.showAddRemarkView.toggle()
                     }
-                    .disabled(self.addButtonDisabled))
+                }) {
+                    Image(systemName: "plus")
+                }
+                .disabled(self.addButtonDisabled))
         }
         .background(EmptyView().sheet(isPresented: self.$showEnterUsernameView) {
             EnterUsernameView(showEnterUsernameView: self.$showEnterUsernameView, showAddRemarkView: self.$showAddRemarkView)

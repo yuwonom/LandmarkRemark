@@ -20,11 +20,17 @@ class HomeViewModel: ObservableObject {
     @Published var localStorageManager: LocalStorageManager = Resolver.resolve()
     
     @Published var annotations: [MKPointAnnotation] = [MKPointAnnotation]()
+    @Published var keywords: String = ""
     private var cancellables: Set<AnyCancellable> = Set<AnyCancellable>()
     
     init() {
         self.firestoreManager.$remarks.sink { (remarks) in
-            self.loadAnnotations(remarks: remarks)
+            self.loadAnnotations()
+        }
+        .store(in: &cancellables)
+        
+        self.$keywords.sink { (keywords) in
+            self.loadAnnotations()
         }
         .store(in: &cancellables)
     }
@@ -39,10 +45,17 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func loadAnnotations(remarks: [Remark]) {
-        for remark in remarks {
+    private func loadAnnotations() {
+        self.annotations.removeAll()
+        for remark in self.firestoreManager.remarks {
             firestoreManager.getUser(id: remark.userId) { (user) in
                 guard let user = user else {
+                    return
+                }
+                
+                // Filter remarks being shown on the map based on keywords
+                let showRemark = user.username.contains(self.keywords) || remark.notes.contains(self.keywords) || self.keywords.isEmpty
+                if !showRemark {
                     return
                 }
                 
