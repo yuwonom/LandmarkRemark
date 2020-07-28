@@ -16,7 +16,6 @@
 		4CD4698224CD935500757E62 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698124CD935500757E62 /* HomeViewModel.swift */; };
 		4CD4698424CD93EF00757E62 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698324CD93EF00757E62 /* MapView.swift */; };
 		4CD4698724CD959A00757E62 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698624CD959A00757E62 /* LocationManager.swift */; };
-		4CD4698924CD9EAD00757E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */; };
 		4CD4698F24CDA18900757E62 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */; };
 		4CD4699124CDA19200757E62 /* EnterUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */; };
 		4CD4699424CDA69100757E62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699324CDA69100757E62 /* User.swift */; };
@@ -26,6 +25,7 @@
 		4CD4699E24CDB05300757E62 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */; };
 		4CD469A024CDB19100757E62 /* Remark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4699F24CDB19100757E62 /* Remark.swift */; };
 		4CD469A224CE57C200757E62 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD469A124CE57C200757E62 /* LocalStorageManager.swift */; };
+		4CD469A424CFA91F00757E62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CD469A324CFA91F00757E62 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		4CD4698124CD935500757E62 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4CD4698324CD93EF00757E62 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4CD4698624CD959A00757E62 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CD4698E24CDA18900757E62 /* EnterUsernameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
 		4CD4699024CDA19200757E62 /* EnterUsernameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewModel.swift; sourceTree = "<group>"; };
 		4CD4699324CDA69100757E62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		4CD4699D24CDB05300757E62 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		4CD4699F24CDB19100757E62 /* Remark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remark.swift; sourceTree = "<group>"; };
 		4CD469A124CE57C200757E62 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		4CD469A324CFA91F00757E62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 				4CD4697E24CD92FB00757E62 /* ViewModels */,
 				4CD4696F24CD8F9E00757E62 /* Assets.xcassets */,
 				4CD4697424CD8F9E00757E62 /* LaunchScreen.storyboard */,
+				4CD469A324CFA91F00757E62 /* GoogleService-Info.plist */,
 				4CD4697724CD8F9E00757E62 /* Info.plist */,
-				4CD4698824CD9EAD00757E62 /* GoogleService-Info.plist */,
 			);
 			path = LandmarkRemark;
 			sourceTree = "<group>";
@@ -220,8 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD4697624CD8F9E00757E62 /* LaunchScreen.storyboard in Resources */,
-				4CD4698924CD9EAD00757E62 /* GoogleService-Info.plist in Resources */,
 				4CD4697024CD8F9E00757E62 /* Assets.xcassets in Resources */,
+				4CD469A424CFA91F00757E62 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
